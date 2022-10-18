@@ -1,24 +1,25 @@
-# README
+# Blog App
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Built With
 
-Things you may want to cover:
+- Ruby, Rails, PostgreSQL
 
-* Ruby version
+## Author
 
-* System dependencies
+- GitHub: [@dodoburner](https://github.com/dodoburner)
+- Twitter: [@DorianUrem](https://twitter.com/DorianUrem)
+- LinkedIn: [Dorian Urem](https://www.linkedin.com/in/dorian-urem-252baa237/)
 
-* Configuration
+## 🤝 Contributing
 
-* Database creation
+Contributions, issues, and feature requests are welcome!
 
-* Database initialization
+Feel free to check the [issues page](../../issues/).
 
-* How to run the test suite
+## Show your support
 
-* Services (job queues, cache servers, search engines, etc.)
+Give a ⭐️ if you like this project!
 
-* Deployment instructions
+## Acknowledgments
 
-* ...
+- Thank you Microverse for this project!
