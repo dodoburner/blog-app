@@ -40,4 +40,9 @@ describe Post, type: :model do
     subject.likes_counter = -5
     expect(subject).to_not be_valid
   end
+
+  it 'increments post counter of author' do
+    subject.send(:update_posts_counter)
+    expect(user.posts_counter).to eq 1
+  end
 end
