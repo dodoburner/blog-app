@@ -12,7 +12,7 @@ class User < ApplicationRecord
   end
 
   private
-  
+
   def init
     self.posts_counter ||= 0
   end

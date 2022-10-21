@@ -1,5 +1,4 @@
 require 'rails_helper'
-require_relative('../app/models/post')
 
 describe Post, type: :model do
   user = User.new(name: 'Fred Flinstone', photo: 'https://fake-site/', bio: 'Just a dude')
@@ -11,7 +10,7 @@ describe Post, type: :model do
   end
 
   it 'the title is under 250char' do
-    subject.title = "a" * 260
+    subject.title = 'a' * 260
     expect(subject).to_not be_valid
   end
 
@@ -23,12 +22,12 @@ describe Post, type: :model do
     expect(subject.likes_counter).to eq 0
   end
   it 'the comments counter is an integer' do
-    subject.comments_counter = "a"
+    subject.comments_counter = 'a'
     expect(subject).to_not be_valid
   end
 
   it 'the likes counter is an integer' do
-    subject.likes_counter = "a"
+    subject.likes_counter = 'a'
     expect(subject).to_not be_valid
   end
 
@@ -41,4 +40,4 @@ describe Post, type: :model do
     subject.likes_counter = -5
     expect(subject).to_not be_valid
   end
- end
+end
