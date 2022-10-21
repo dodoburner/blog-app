@@ -16,8 +16,8 @@ class Post < ApplicationRecord
   private
 
   def init
-    likes_counter ||= 0
-    comments_counter ||= 0
+    self.likes_counter ||= 0
+    self.comments_counter ||= 0
   end
 
   def update_posts_counter
