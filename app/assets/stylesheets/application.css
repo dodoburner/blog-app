@@ -17,6 +17,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  text-decoration: none;
+  color: black;
 }
 
 .all-users-page,
@@ -55,6 +57,11 @@
 }
 
 .post:hover {
-  cursor: pointer;
   background-color: gray;
+}
+
+.see-posts-btn {
+  border: 1px solid black;
+  padding: 5px;
+  align-self: center;
 }

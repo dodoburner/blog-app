@@ -5,14 +5,7 @@
     <p><%= @user.bio %></p>
   </div>
 
-  <% @posts.each_with_index do |post, index| %>
-    <div class="post">
-      <h2><%= post.title %></h2>
-      <p><%= post.text %></p>
-      <p>
-        Comments: <%= post.comments_counter %>,
-        Likes: <%= post.likes_counter %>
-      </p>
-    </div>
-  <% end %>
+  <%= render partial: "shared/post", collection: @posts %>
+  
+  <%= link_to "See All Posts", "/users/#{@user.id}/posts", class: "see-posts-btn" %>
 </div>
