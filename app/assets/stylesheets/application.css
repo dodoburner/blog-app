@@ -19,7 +19,8 @@
   box-sizing: border-box;
 }
 
-.all-users {
+.all-users-page,
+.user-page {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -45,4 +46,15 @@
 
 .posts-counter {
   align-self: flex-end;
+}
+
+.user-bio,
+.post {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.post:hover {
+  cursor: pointer;
+  background-color: gray;
 }

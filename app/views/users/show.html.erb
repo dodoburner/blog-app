@@ -1,1 +1,18 @@
-<h1>This is the user page</h1>
+<div class="user-page">
+  <%= render partial: "shared/user", locals: { user: @user } %>
+  <div class="user-bio">
+    <h2>Bio</h2>
+    <p><%= @user.bio %></p>
+  </div>
+
+  <% @posts.each_with_index do |post, index| %>
+    <div class="post">
+      <h2><%= post.title %></h2>
+      <p><%= post.text %></p>
+      <p>
+        Comments: <%= post.comments_counter %>,
+        Likes: <%= post.likes_counter %>
+      </p>
+    </div>
+  <% end %>
+</div>
