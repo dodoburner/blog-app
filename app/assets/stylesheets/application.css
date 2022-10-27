@@ -22,7 +22,8 @@
 }
 
 .all-users-page,
-.user-page {
+.user-page,
+.posts-page {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -51,7 +52,8 @@
 }
 
 .user-bio,
-.post {
+.post,
+.comments {
   border: 1px solid black;
   padding: 20px;
 }
