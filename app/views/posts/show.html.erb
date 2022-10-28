@@ -14,4 +14,9 @@
       </p>
     <% end %>
   </div>
+
+  <%= bootstrap_form_with model: @comment, url: post_path, method: :post, scope: :form_comment do |f| %>
+    <%= f.text_area :text %>
+    <%= f.submit %>
+  <% end %>
 </div>
