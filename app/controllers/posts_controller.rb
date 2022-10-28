@@ -8,4 +8,21 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
   end
+
+  def new
+    @post = Post.new
+  end
+
+  def create
+    @user = current_user
+    @post = Post.new(params.require(:form_post).permit(:title, :text))
+    @post.author = @user
+
+    if @post.save
+      flash[:success] = "Question saved successfully"
+      redirect_to post_path(@user, @post)
+    else
+      flash.now[:error] = "Error: Question could not be saved"
+    end
+  end
 end

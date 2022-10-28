@@ -1,7 +1,7 @@
 <div class="p-5">
   <h1>Create New Post</h1>
 
-  <%= bootstrap_form_with model: @post, url: posts_new_path do |f| %>
+  <%= bootstrap_form_with model: @post, url: posts_new_path, method: :post, scope: :form_post do |f| %>
     <%= f.text_field :title %>
     <%= f.text_area :text %>
     <%= f.submit %>
