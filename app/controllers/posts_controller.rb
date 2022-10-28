@@ -8,6 +8,7 @@ class PostsController < ApplicationController
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
     @comment = Comment.new
+    @like = Like.new
   end
 
   def create_comment
@@ -16,11 +17,17 @@ class PostsController < ApplicationController
     @comment.author = current_user
 
     if @comment.save
-      flash[:success] = "Question saved successfully"
+      flash[:success] = 'Comment created successfully'
       redirect_to post_path
     else
-      flash.now[:error] = "Error: Question could not be saved"
+      flash.now[:error] = 'Error: Comment could not be created'
     end
+  end
+
+  def create_like
+    @like = Like.new(author: current_user, post: Post.find(params[:id]))
+
+    redirect_to post_path if @like.save
   end
 
   def new
@@ -33,10 +40,10 @@ class PostsController < ApplicationController
     @post.author = @user
 
     if @post.save
-      flash[:success] = "Question saved successfully"
+      flash[:success] = 'Question saved successfully'
       redirect_to post_path(@user, @post)
     else
-      flash.now[:error] = "Error: Question could not be saved"
+      flash.now[:error] = 'Error: Question could not be saved'
     end
   end
 end
