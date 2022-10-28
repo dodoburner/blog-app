@@ -1,1 +1,11 @@
-<h1>This is the user page</h1>
+<div class="user-page">
+  <%= render partial: "shared/user", locals: { user: @user } %>
+  <div class="user-bio">
+    <h2>Bio</h2>
+    <p><%= @user.bio %></p>
+  </div>
+
+  <%= render partial: "shared/post", collection: @posts %>
+  
+  <%= link_to "See All Posts", "/users/#{@user.id}/posts", class: "see-posts-btn" %>
+</div>

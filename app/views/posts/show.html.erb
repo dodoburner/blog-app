@@ -1,1 +1,17 @@
-<h1>This is a post</h1>
+ <div class="post-page">
+  <div class="large-post">
+    <h2><%= @post.title + ' by ' + @user.name%></h2>
+    <p>
+        Comments: <%= @post.comments_counter %>,
+        Likes: <%= @post.likes_counter %>
+      </p>
+    <p><%= @post.text %></p>
+  </div>
+  <div class="comments">
+    <% @post.comments.each do |comment| %>
+      <p>
+        <%= User.find(comment.author_id).name %>: <%= comment.text %>
+      </p>
+    <% end %>
+  </div>
+</div>
