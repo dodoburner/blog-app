@@ -14,4 +14,13 @@
       </p>
     <% end %>
   </div>
+
+  <%= bootstrap_form_with model: @comment, url: post_path, method: :post, scope: :form_comment do |f| %>
+    <%= f.text_area :text, label: "Add Comment" %>
+    <%= f.submit "Comment" %>
+  <% end %>
+
+  <%= bootstrap_form_with model: @like, url: like_path, method: :post do |f| %>
+    <%= f.submit "Like", class: "btn btn-danger" %>
+  <% end %>
 </div>
