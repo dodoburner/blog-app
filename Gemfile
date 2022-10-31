@@ -76,3 +76,4 @@ end
 gem 'bootstrap', '~> 5.2.2'
 gem 'bootstrap_form', '~> 5.1'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'bullet', group: 'development'
