@@ -13,4 +13,5 @@ Rails.application.routes.draw do
   post '/users/:user_id/posts/:id/', to: 'posts#create_comment'
   post '/users/:user_id/posts/:id/likes', to: 'posts#create_like', as: 'like'
   devise_for :users, path: ''
+  root to: 'users#index'
 end
