@@ -63,4 +63,37 @@ RSpec.describe 'Post view', type: :system do
       expect(page).to have_current_path('users/1/posts/1')
     end
   end
+
+  describe 'post show page' do
+    it 'shows the posts title' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('new post')
+    end
+    it 'shows the posts author' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('Lilly')
+    end
+    it 'shows the number of comments' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('Comments: 1')
+    end
+    it 'shows the number of likes' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('Likes: 0')
+    end
+    it 'shows the post body' do
+      visit '/users/1/posts/1'
+      expect(page).to have_content('I love posting')
+    end
+    it 'shows the username of each commentator' do
+      visit '/users/1/posts/1'
+      comments = page.find('.comments')
+      expect(comments).to have_content('Lilly')
+    end
+    it 'shows the comment of each commentator' do
+      visit '/users/1/posts/1'
+      comments = page.find('.comments')
+      expect(comments).to have_content('I love comments')
+    end
+  end
 end
