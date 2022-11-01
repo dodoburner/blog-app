@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   get '/users/:user_id/posts/:id', to: 'posts#show', as: 'post'
   post '/users/:user_id/posts/:id/', to: 'posts#create_comment'
   post '/users/:user_id/posts/:id/likes', to: 'posts#create_like', as: 'like'
+  devise_for :users, path: ''
 end
