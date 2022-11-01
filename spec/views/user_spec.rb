@@ -2,16 +2,16 @@ require 'rails_helper'
 
 RSpec.describe 'User view', type: :system do
   before(:all) do
-      lilly = User.create( name: "Lilly",
-        photo: "https://randomuser.me/api/portraits/women/40.jpg",
-        bio: "Teacher from Poland.",)
-      User.create(name: "Tom",
-        photo: "https://randomuser.me/api/portraits/men/92.jpg",
-        bio: "Teacher from Mexico.",)
-        Post.create(author: lilly, title: 'new post', text: 'I love posting')
-        Post.create(author: lilly, title: 'second post', text: 'yeahhh')
-        Post.create(author: lilly, title: 'third post', text: 'uuuu')
-        Post.create(author: lilly, title: 'fourth post', text: 'eee')
+    lilly = User.create(name: 'Lilly',
+                        photo: 'https://randomuser.me/api/portraits/women/40.jpg',
+                        bio: 'Teacher from Poland.')
+    User.create(name: 'Tom',
+                photo: 'https://randomuser.me/api/portraits/men/92.jpg',
+                bio: 'Teacher from Mexico.')
+    Post.create(author: lilly, title: 'new post', text: 'I love posting')
+    Post.create(author: lilly, title: 'second post', text: 'yeahhh')
+    Post.create(author: lilly, title: 'third post', text: 'uuuu')
+    Post.create(author: lilly, title: 'fourth post', text: 'eee')
   end
 
   describe 'index page' do

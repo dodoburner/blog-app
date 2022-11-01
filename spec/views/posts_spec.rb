@@ -1,16 +1,16 @@
 require 'rails_helper'
 RSpec.describe 'Post view', type: :system do
   before(:all) do
-    @lilly = User.create( name: "Lilly",
-      photo: "https://randomuser.me/api/portraits/women/40.jpg",
-      bio: "Teacher from Poland.",)
+    @lilly = User.create(name: 'Lilly',
+                         photo: 'https://randomuser.me/api/portraits/women/40.jpg',
+                         bio: 'Teacher from Poland.')
     @first_post = Post.create(author: @lilly, title: 'new post', text: 'I love posting')
     Comment.create(author: @lilly, post: @first_post, text: 'I love comments')
     Post.create(author: @lilly, title: 'second post', text: 'yeahhh')
     Post.create(author: @lilly, title: 'third post', text: 'uuuu')
     Post.create(author: @lilly, title: 'fourth post', text: 'eee')
   end
-  
+
   describe 'post index page' do
     it 'shows the users profile picture' do
       visit '/users/1/posts'
@@ -41,7 +41,7 @@ RSpec.describe 'Post view', type: :system do
       post = page.first('.post')
       expect(post).to have_content('I love posting')
     end
-    
+
     it 'shows the first comment of a post' do
       visit '/users/1/posts'
       comments = page.first('.comments')
