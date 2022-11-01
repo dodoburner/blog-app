@@ -1,0 +1,28 @@
+example_id                         | status | run_time        |
+---------------------------------- | ------ | --------------- |
+./spec/views/posts_spec.rb[1:1:1]  | passed | 0.54309 seconds |
+./spec/views/posts_spec.rb[1:1:2]  | passed | 0.55836 seconds |
+./spec/views/posts_spec.rb[1:1:3]  | passed | 0.57474 seconds |
+./spec/views/posts_spec.rb[1:1:4]  | passed | 8.3 seconds     |
+./spec/views/posts_spec.rb[1:1:5]  | passed | 0.56818 seconds |
+./spec/views/posts_spec.rb[1:1:6]  | passed | 0.57162 seconds |
+./spec/views/posts_spec.rb[1:1:7]  | passed | 0.55321 seconds |
+./spec/views/posts_spec.rb[1:1:8]  | passed | 0.60209 seconds |
+./spec/views/posts_spec.rb[1:1:9]  | passed | 0.56237 seconds |
+./spec/views/posts_spec.rb[1:1:10] | passed | 0.79969 seconds |
+./spec/views/posts_spec.rb[1:2:1]  | passed | 0.58553 seconds |
+./spec/views/posts_spec.rb[1:2:2]  | passed | 0.56298 seconds |
+./spec/views/posts_spec.rb[1:2:3]  | passed | 0.56253 seconds |
+./spec/views/posts_spec.rb[1:2:4]  | passed | 0.96948 seconds |
+./spec/views/posts_spec.rb[1:2:5]  | passed | 0.55003 seconds |
+./spec/views/posts_spec.rb[1:2:6]  | passed | 0.61648 seconds |
+./spec/views/posts_spec.rb[1:2:7]  | passed | 0.5469 seconds  |
+./spec/views/user_spec.rb[1:1:1]   | passed | 1.2 seconds     |
+./spec/views/user_spec.rb[1:1:2]   | passed | 1.14 seconds    |
+./spec/views/user_spec.rb[1:1:3]   | passed | 0.92938 seconds |
+./spec/views/user_spec.rb[1:1:4]   | passed | 1.92 seconds    |
+./spec/views/user_spec.rb[1:2:1]   | passed | 1.19 seconds    |
+./spec/views/user_spec.rb[1:2:2]   | passed | 1.16 seconds    |
+./spec/views/user_spec.rb[1:2:3]   | passed | 14.95 seconds   |
+./spec/views/user_spec.rb[1:2:4]   | passed | 1.19 seconds    |
+./spec/views/user_spec.rb[1:2:5]   | passed | 1.27 seconds    |
