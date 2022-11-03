@@ -11,6 +11,12 @@ class PostsController < ApplicationController
     @like = Like.new
   end
 
+  def destroy
+    Post.find(params[:id]).destroy
+    @user = User.find(params[:user_id])
+    redirect_to "/users/#{params[:user_id]}/posts"
+  end
+
   def create_comment
     @comment = Comment.new(params.require(:form_comment).permit(:text))
     @comment.post = Post.find(params[:id])
