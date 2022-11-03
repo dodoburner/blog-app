@@ -79,3 +79,5 @@ gem 'bootstrap_form', '~> 5.1'
 gem 'bullet'
 gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'cancancan'
+
