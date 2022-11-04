@@ -30,6 +30,11 @@ class PostsController < ApplicationController
     end
   end
 
+  def destroy_comment
+    Comment.find(params[:comment]).destroy
+    redirect_to post_path
+  end
+
   def create_like
     @like = Like.new(author: current_user, post: Post.find(params[:id]))
 

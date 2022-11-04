@@ -6,12 +6,12 @@ class Ability
   def initialize(user)
 
     return unless user.present?
-    can :delete, Post, author_id: user.id
-    can :delete, Comment, author_id: user.id
+      can :delete, Post, author_id: user.id
+      can :delete, Comment, author_id: user.id
 
     return unless user.role == 'admin'
-    can :manage, Post
-    can :manage, Comment
+      can :manage, Post
+      can :manage, Comment
 
     # Define abilities for the user here. For example:
     #
