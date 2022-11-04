@@ -6,16 +6,24 @@
         Likes: <%= @post.likes_counter %>
       </p>
     <p><%= @post.text %></p>
-  </div>
-  <div class="comments">
-    <% @post.comments.each do |comment| %>
-      <p>
-        <%= comment.author.name %>: <%= comment.text %>
-      </p>
+
+    <% if can? :delete, @post %>
+      <%= link_to 'Delete Post', post_path, data: { turbo_method: :delete }, class: "btn btn-danger" %>
     <% end %>
   </div>
 
-  <%= bootstrap_form_with model: @comment, url: post_path, method: :post, scope: :form_comment do |f| %>
+  <div class="comments">
+    <% @post.comments.each do |comment| %>
+      <div>
+        <p><%= comment.author.name %>: <%= comment.text %></p>
+        <% if can? :delete, comment %>
+          <%= link_to 'Delete Comment', destroy_comment_path(comment: comment.id), data: { turbo_method: :delete }, class: "btn btn-danger" %>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+
+  <%= bootstrap_form_with model: @comment, url: create_comment_path, method: :post, scope: :form_comment do |f| %>
     <%= f.text_area :text, label: "Add Comment" %>
     <%= f.submit "Comment" %>
   <% end %>

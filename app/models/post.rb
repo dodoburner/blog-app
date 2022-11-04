@@ -2,7 +2,8 @@ class Post < ApplicationRecord
   belongs_to :author, class_name: 'User'
   has_many :likes
   has_many :comments
-  after_save :update_posts_counter
+  after_save :increment_posts_counter
+  after_destroy :decerement_posts_counter
   after_initialize :init
 
   validates :title, presence: true, length: { maximum: 250 }
@@ -20,7 +21,11 @@ class Post < ApplicationRecord
     self.comments_counter ||= 0
   end
 
-  def update_posts_counter
+  def increment_posts_counter
     author.increment!(:posts_counter)
+  end
+
+  def decerement_posts_counter
+    author.decrement!(:posts_counter)
   end
 end
