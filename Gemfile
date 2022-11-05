@@ -80,3 +80,8 @@ gem 'bullet'
 gem 'cancancan'
 gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'
+gem 'bcrypt', '~> 3.1.7'
+gem 'jwt'
+gem 'simple_command'
+
+

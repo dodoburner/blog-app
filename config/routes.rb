@@ -17,4 +17,14 @@ Rails.application.routes.draw do
   post '/users/:user_id/posts/:id/likes', to: 'likes#create_like', as: 'like'
   devise_for :users, path: ''
   root to: 'users#index'
+  post 'authenticate', to: 'authentication#authenticate'
+  namespace :api do
+    resources :users do 
+      resources :posts 
+    end 
+    resources :posts do
+       resources :comments 
+       resources :likes 
+    end
+  end
 end

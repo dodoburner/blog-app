@@ -13,6 +13,8 @@ class User < ApplicationRecord
 
   ROLES = %i[admin default].freeze
 
+  has_secure_password
+
   def most_recent_posts
     posts.order(created_at: :desc).limit(3)
   end
