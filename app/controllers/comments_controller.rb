@@ -8,7 +8,7 @@ class CommentsController < ApplicationController
       flash[:success] = 'Comment created successfully'
       redirect_to post_path
     else
-      flash.now[:error] = 'Error: Comment could not be created' 
+      flash.now[:error] = 'Error: Comment could not be created'
     end
   end
 
@@ -17,8 +17,8 @@ class CommentsController < ApplicationController
     redirect_to post_path
   end
 
-  private 
- 
+  private
+
   def comment_params
     params.require(:comment).permit(:text)
   end

@@ -1,5 +1,7 @@
 class Api::CommentsController < ApplicationController
   before_action :authenticate_request
+  skip_before_action :verify_authenticity_token
+
   def index
     render :json => Comment.all.where(post_id: params[:post_id])
   end
@@ -16,7 +18,7 @@ class Api::CommentsController < ApplicationController
     end
   end
 
-  private 
+  private
 
   def comment_params
     params.require(:comment).permit(:text)

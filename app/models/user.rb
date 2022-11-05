@@ -19,8 +19,8 @@ class User < ApplicationRecord
     posts.order(created_at: :desc).limit(3)
   end
 
-  def as_json(options={})
-    super(only: [:name, :posts_counter, :bio])
+  def as_json(_options = {})
+    super(only: %i[name posts_counter bio])
   end
 
   private
