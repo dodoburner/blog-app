@@ -23,7 +23,7 @@
     <% end %>
   </div>
 
-  <%= bootstrap_form_with model: @comment, url: create_comment_path, method: :post, scope: :form_comment do |f| %>
+  <%= bootstrap_form_with model: @comment, url: create_comment_path, method: :post, scope: :comment do |f| %>
     <%= f.text_area :text, label: "Add Comment" %>
     <%= f.submit "Comment" %>
   <% end %>

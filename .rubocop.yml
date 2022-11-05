@@ -63,3 +63,5 @@ Layout/EndOfLine:
   Enabled: False
 Style/HashSyntax:
   Enabled: False
+Style/GuardClause:
+  Enabled: false

@@ -4,6 +4,10 @@ class Comment < ApplicationRecord
   after_save :increment_comments_counter
   after_destroy :decrement_comments_counter
 
+  def as_json(_options = {})
+    super(only: %i[text author_id])
+  end
+
   private
 
   def increment_comments_counter
