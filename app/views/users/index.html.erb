@@ -1,4 +1,4 @@
 <div class="all-users-page">
   <%= render partial: "shared/user", collection: @users %>
-  <%= link_to 'Create Post', create_post_path, class: "btn btn-primary align-self-center" %>
+  <%= link_to 'Create Post', new_user_post_path(@current_user), class: "btn btn-primary align-self-center" %>
 </div>
