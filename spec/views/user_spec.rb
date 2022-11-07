@@ -42,4 +42,38 @@ RSpec.describe 'User view', type: :system do
       expect(page).to have_current_path('/users/2')
     end
   end
+
+  describe 'user show page' do
+    it 'shows the users profile picture' do
+      visit '/users/1'
+      img = page.find('img')
+      expect(img['src']).to have_content('https://randomuser.me/api/portraits/women/40.jpg')
+    end
+
+    it 'shows the users username' do
+      visit '/users/1'
+      username = page.find('.user-name')
+      expect(username).to have_content('Lilly')
+    end
+
+    it 'shows the users posts counter' do
+      visit '/users/1'
+      posts_counter = page.find('.posts-counter')
+      expect(posts_counter).to have_content('Number of posts: 4')
+    end
+
+    it 'shows the users bio' do
+      visit '/users/1'
+      bio = page.find('.user-bio')
+      expect(bio).to have_content('Teacher from Poland.')
+    end
+
+    it 'shows the users first 3 posts' do
+      visit '/users/1'
+      posts = page.all('.post')
+      expect(posts[0]).to have_content('fourth post')
+      expect(posts[1]).to have_content('uuuu')
+      expect(posts[2]).to have_content('second post')
+    end
+  end
 end
