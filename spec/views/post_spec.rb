@@ -44,14 +44,8 @@ RSpec.describe 'Post view', type: :system do
 
     it 'shows the first comment of a post' do
       visit '/users/1/posts'
-      comments = page.first('.comments')
-      expect(comments).to have_content('I love comments')
-    end
-
-    it 'shows how many comments a post has' do
-      visit '/users/1/posts'
-      post = page.first('.post')
-      expect(post).to have_content('Comments: 1')
+      # comments = page.first('.comments')
+      expect(page).to have_content('I love comments')
     end
 
     it 'shows how many comments a post has' do
