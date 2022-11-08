@@ -10,4 +10,5 @@ Rails.application.routes.draw do
       resources :comments
     end
   end
+  devise_for :users, path: ''
 end
