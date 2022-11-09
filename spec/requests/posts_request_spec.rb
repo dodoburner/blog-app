@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Posts', type: :request do
+RSpec.describe 'Posts', type: :request do
   it 'renders the posts index' do
     get '/users/12/posts'
     expect(response).to have_http_status(200)

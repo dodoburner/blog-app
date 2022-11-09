@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe Post, type: :model do
+RSpec.describe Post, type: :model do
   user = User.new(name: 'Fred Flinstone', photo: 'https://fake-site/', bio: 'Just a dude')
   subject { Post.new(author: user, title: 'Title', text: 'Some Text Bla Bla!!!') }
 
