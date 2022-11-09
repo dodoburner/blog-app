@@ -76,4 +76,5 @@ end
 
 gem 'bootstrap', '~> 5.2.2'
 gem 'bootstrap_form', '~> 5.1'
+gem 'devise'
 gem 'rubocop', '>= 1.0', '< 2.0'

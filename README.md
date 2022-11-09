@@ -6,6 +6,8 @@
 
 ## Author
 
+**Dorian Urem**
+
 - GitHub: [@dodoburner](https://github.com/dodoburner)
 - Twitter: [@DorianUrem](https://twitter.com/DorianUrem)
 - LinkedIn: [Dorian Urem](https://www.linkedin.com/in/dorian-urem-252baa237/)
