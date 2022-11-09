@@ -6,7 +6,7 @@ require_relative '../config/environment'
 abort('The Rails environment is running in production mode!') if Rails.env.production?
 require 'rspec/rails'
 require 'spec_helper'
-require "capybara/rspec"
+require 'capybara/rspec'
 
 # Add additional requires below this line. Rails is not loaded until this point!
 
@@ -35,10 +35,10 @@ end
 
 Capybara.register_driver :selenium_chrome do |app|
   Capybara::Selenium::Driver.new(app, browser: :chrome)
- end
- 
+end
+
 Capybara.javascript_driver = :selenium_chrome
- 
+
 RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"

@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe User, type: :model do
+RSpec.describe User, type: :model do
   subject { User.new(name: 'Fred Flinstone', photo: 'https://fake-site/', bio: 'Just a dude') }
 
   it 'title should be present' do
