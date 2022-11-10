@@ -14,8 +14,11 @@
 
   <div class="comments">
     <% @post.comments.each do |comment| %>
-      <p>
+      <p>     
         <%= comment.author.name %>: <%= comment.text %>
+        <% if can? :delete, comment %>
+          <%= link_to 'Delete Comment', user_post_comment_path(post_id: params[:id], id: comment.id), data: { turbo_method: :delete }, class: "btn btn-danger" %>
+        <% end %>
       </p>
     <% end %>
   </div>
