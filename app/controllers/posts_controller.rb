@@ -28,4 +28,9 @@ class PostsController < ApplicationController
       flash.now[:error] = 'Error: Question could not be saved'
     end
   end
+
+  def destroy
+    Post.find(params[:id]).destroy
+    redirect_to user_path(current_user)
+  end
 end
