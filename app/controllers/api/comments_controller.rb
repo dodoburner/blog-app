@@ -1,6 +1,6 @@
-class Api::CommentsController < ApplicationController
+class Api::CommentsController < Api::ApiController
   def index
-    @comments = Comment.all.where(post_id: params[:id])
+    @comments = Comment.all.where(post_id: params[:post_id])
 
     render json: @comments
   end
@@ -11,9 +11,9 @@ class Api::CommentsController < ApplicationController
     @comment.author = current_user
 
     if @comment.save
-      render json: @comment, status: :created, location: @comment
+      render json: @comment, status: :created
     else
-      render json: @comments.errors, status: :unprocessable_entity
+      render json: @comment.errors, status: :unprocessable_entity
     end
   end
 
