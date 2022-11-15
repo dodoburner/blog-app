@@ -1,7 +1,17 @@
 <div class="all-users-page">
+<<<<<<< HEAD
   <button class= 'btn btn-secondary align-self-end'>
     <%= link_to 'Sign Out', destroy_user_session_path, class: 'text-light', data: { turbo_method: :delete } %>
   </button>
   <%= render partial: "shared/user", collection: @users %>
   <%= link_to 'Create Post', create_post_path, class: "btn btn-primary align-self-center" %>
+=======
+  <% if user_signed_in? %>
+    <button class= 'btn btn-secondary align-self-end'>
+      <%= link_to 'Sign Out', destroy_user_session_path, class: 'text-light', data: { turbo_method: :delete } %>
+    </button>
+    <%= render partial: "shared/user", collection: @users %>
+    <%= link_to 'Create Post', new_user_post_path(@current_user), class: "btn btn-primary align-self-center" %>
+  <% end %>
+>>>>>>> 70ca49fcd027ac4c7ad9e44859a4720046f5a6cb
 </div>

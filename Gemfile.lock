@@ -268,7 +268,10 @@ GEM
     tzinfo (2.0.5)
       concurrent-ruby (~> 1.0)
     unicode-display_width (2.3.0)
+<<<<<<< HEAD
     uniform_notifier (1.16.0)
+=======
+>>>>>>> 70ca49fcd027ac4c7ad9e44859a4720046f5a6cb
     warden (1.2.9)
       rack (>= 2.0.9)
     web-console (4.2.0)

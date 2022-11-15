@@ -14,7 +14,11 @@ Devise.setup do |config|
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
   # by default. You can change it below and use your own secret key.
+<<<<<<< HEAD
   # config.secret_key = '99c06edf94f200857c6cd0567a6c38c9c15e9c03d4eff4708a32bd4134bf36345b56375717cf60f19eb259f677307df82d3d89c1fff3ca831da5612983ff7d1a'
+=======
+  # config.secret_key = '336bf5284b853ef9fd3c7fbd7694708f8221557c4b8e597bf38cc8994b5b202852efcbad7d1c03481992ea74e0e32c1943869e372be06fa9d2e1bfd82a56466d'
+>>>>>>> 70ca49fcd027ac4c7ad9e44859a4720046f5a6cb
 
   # ==> Controller configuration
   # Configure the parent class to the devise controllers.
@@ -126,7 +130,11 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
+<<<<<<< HEAD
   # config.pepper = '6cfd3fc5c156efb2b365a43394e7527599e19a1105723b9f7f538134077499677bd77d71ea1f815c95c2adb6b6c520c919cf6c9833deb14c46cc8e5c88d43414'
+=======
+  # config.pepper = '6300a8edc9a56f67df06e8225672b6ba54074c6a6d24d8f9c12ff11d1a5e879e162f8c6797dd0899c38a7fa9eab70f68f692850a99636e2db100538b7bebb668'
+>>>>>>> 70ca49fcd027ac4c7ad9e44859a4720046f5a6cb
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -157,7 +165,11 @@ Devise.setup do |config|
   # initial account confirmation) to be applied. Requires additional unconfirmed_email
   # db field (see migrations). Until confirmed, new email is stored in
   # unconfirmed_email column, and copied to email column on successful confirmation.
+<<<<<<< HEAD
   config.reconfirmable = true
+=======
+  config.reconfirmable = false
+>>>>>>> 70ca49fcd027ac4c7ad9e44859a4720046f5a6cb
 
   # Defines which key will be used when confirming an account
   # config.confirmation_keys = [:email]
@@ -308,4 +320,8 @@ Devise.setup do |config|
   # When set to false, does not sign a user in automatically after their password is
   # changed. Defaults to true, so a user is signed in automatically after changing a password.
   # config.sign_in_after_change_password = true
+<<<<<<< HEAD
+=======
+  config.navigational_formats = ['*/*', :html, :turbo_stream]
+>>>>>>> 70ca49fcd027ac4c7ad9e44859a4720046f5a6cb
 end
