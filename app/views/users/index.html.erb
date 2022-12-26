@@ -3,7 +3,13 @@
     <button class= 'btn btn-secondary align-self-end'>
       <%= link_to 'Sign Out', destroy_user_session_path, class: 'text-light', data: { turbo_method: :delete } %>
     </button>
-    <%= render partial: "shared/user", collection: @users %>
-    <%= link_to 'Create Post', new_user_post_path(@current_user), class: "btn btn-primary align-self-center" %>
+  <%= link_to 'Create Post', new_user_post_path(@current_user), class: "btn btn-primary align-self-center" %>
+  <% else %>
+    <div class="devise-links-container">
+      <p>Want to see what people are posting? Login or sign up here.</p>
+      <%= link_to "Log in", new_user_session_path %><br />
+      <%= link_to "Sign up", new_user_registration_path %><br />
+    </div>
   <% end %>
+  <%= render partial: "shared/user", collection: @users %>
 </div>
